@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Signika+Negative&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    font-size: 18px;
+    background-color: hsl(0, 0%, 98%);
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+nav ul li{
+    list-style-type: none;
+    margin: 0 1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+nav ul li img{
+    margin-left: 0.5rem;
+}
+.nav-btn button{
+    border: 0;
+    background-color: hsl(0, 0%, 98%);
+    margin: 0 1rem; 
+}
+.sub-menu{
+    display: none;
+}
+nav ul li:hover .sub-menu,
+nav ul li:active .sub-menu{
+    display: block;
+    position: absolute;
+    box-shadow: 1px 1px 3px hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 3px;
+}
+nav ul li:hover .sub-menu ul,
+nav ul li:active .sub-menu ul{
+    display: block;
+} 
+nav ul li:hover .sub-menu ul li,
+nav ul li:active .sub-menu ul li{
+    padding: 6px;
+}
+.sub-menu li a:hover{
+    letter-spacing: 1px;
+}
+.sub-menu img{
+    padding-right: 5px;
+}
+button#register{
+    width:5rem;
+    height: 2rem;
+    border: 2px solid hsl(0, 0%, 8%);
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+.icon-menu{
+    display: none;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+div.content{
+    flex-direction: column;
+    margin-right: 4rem;
+    padding: 0.1rem 0.5rem;
+}
+h1{
+    margin-bottom: 10rem;
+    font-size: 50px; 
+}
+.content p{
+    margin-top: -6rem;
+    color:hsl(0, 0%, 41%);
+}
+#learn-btn{
+    width: 7rem;
+    height: 2rem;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 98%);
+    margin: 4rem 0;
+    font-weight: bold;
+}
+#learn-btn:hover,
+#learn-btn:active{
+    outline: none;
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    transition: 0.4s;
+}
+.flex-logos img{
+    margin: 0 0.4rem;
+}
+@media(max-width:768px){
+    body{
+        font-size:20px;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    header{
+        display: block; 
+    }
+    header nav{
+        display: none;
+    } 
+    header .nav-btn{
+        text-align: center;
+    }
+    header .nav-btn button{
+        cursor: pointer;
+    }
+    header nav.active{  
+        display: block;
+        margin: 0.5rem 0;
+        padding: 1rem;
+        float: right; 
+        width: 200px;
+        position: absolute;
+        right: 0;
+        box-shadow: 4px 5px 8px black;
+        background-color: hsl(0, 0%, 98%);
+    }
+    header .nav-btn.nav-btn.active{
+        display: block;
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-menu,
+    .sub-menu:active,
+    .sub-menu:hover{
+        margin-left: -9rem;
+        margin-top: -1rem;
+    }
+    header nav ul li{
+        margin-bottom: 2rem;
+    }
+    .icon-menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0; 
+        transform: translate(-50%, 100%); 
+        cursor: pointer;
+    }
+    main{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .desktop-img img{
+        width: 100%;
+    } 
+    div.content{
+        margin: 10px 10px;
+    }
+    h1{
+        text-align: center;
+        font-size: 3rem;
+    }
+    .content .flex-logos{
+        text-align: center;
+    }
+    .content p{
+       font-size: 18px; 
+       text-align: center;   
+    }
+    #learn-btn{
+        margin: 3rem 40%;
+    }
+
+}
